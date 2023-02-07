@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;900&display=swap" rel="stylesheet">
+</head>
+<style>
+    @font-face {
+        font-family: font;
+        src: url(Etna-Sans-serif.otf);
+    }
+
+    * {
+        font-family: 'Jost', sans-serif;
+        font-size: 19px;
+        padding: 0;
+        margin: 0;
+    }
+    .lit{
+        font-family: 'Jost', sans-serif;
+        font-size: 35px;
+       
+    }
+.litbold{
+    font-family: 'Jost', sans-serif;
+        font-size: 35px;
+    font-weight: 600;
+}
+    .big {
+        font-size: 42px;
+    }
+
+    .bold {
+        font-weight: 1000;
+    }
+
+    .font {
+        font-family: font;
+    }
+
+    .bluetxt {
+        color: rgb(67, 71, 152);
+
+    }
+
+    .greytxt {
+        color: rgb(92, 92, 92);
+    }
+
+    .nav-link {
+        color: white;
+        font-size: 25px;
+    }
+
+    .mb {
+        margin-bottom: 20px;
+    }
+
+
+    .logo {
+        width: 100px;
+        height: 100px;
+        background-image: url("logo-transparent.png");
+        background-position: center;
+        background-size: cover;
+    }
+
+    .navbar-nav {
+        justify-content: space-between;
+        width: 60%;
+    }
+
+    .tete {
+        display: flex;
+        margin-bottom: 50px;
+        justify-content: space-around;
+        width: 100%;
+    }
+
+
+
+    .header {
+        background-image: url("transport-3.jpg");
+        height: 650px;
+        border-radius: 100% 100% / 0 0 15% 15%;
+        background-position: center;
+        background-size: cover;
+        box-shadow: 1px 3px 9px grey;
+
+    }
+
+    .navbar {
+        color: azure;
+    }
+
+
+
+
+
+
+    .slogan {
+        margin: 0 100px 0 20px;
+        color: rgb(255, 255, 255);
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .contactez_nous {
+        font-size: 200px;
+        font-weight: 800;
+        color: white;
+        display: inline-block;
+        width: 300px;
+        height: 70px;
+        text-decoration: none;
+        background-color: rgb(67, 71, 152);
+        border-radius: 50px;
+        margin-top: 100px;
+        padding-bottom: 20px;
+
+
+    }
+
+    .contactez_nous:hover {
+        background-color: rgb(99, 102, 154);
+    }
+
+    .text_btn {
+        font-size: 30px;
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+        margin-top: 7px;
+    }
+
+    .skills {
+        padding: 20px;
+    }
+
+    .itemskill {
+        border-radius: 10px;
+        text-align: center;
+        padding: 5px;
+        box-shadow: 1px 3px 9px grey;
+    }
+
+    .titleskill {
+        padding: 20px;
+    }
+
+    .textskill {
+        margin-bottom: 40px;
+        text-align: justify;
+        padding: 20px;
+    }
+
+    .demandeprix {
+
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 1px 3px 9px grey;
+        border-radius: 10px;
+        margin-bottom: 20px;
+
+    }
+
+    .demandeprix a,
+    .demandeprix h4 {
+        display: inline-block;
+    }
+
+    .demande {
+        padding: 20px;
+    }
+
+    .formulaire {
+        text-align: center;
+        border-radius: 10px;
+        margin: 0 auto;
+        width: 70%;
+        flex-direction: column;
+    }
+
+    .button {
+        margin-left: 40%;
+    }
+
+    .allservice {
+        padding: 20px;
+
+    }
+
+    .services {
+        padding: 20px;
+        color: white;
+        background-image: url("remorquage-13.jpg");
+        background-position: center;
+        background-size: cover;
+        border-radius: 10px;
+        box-shadow: 1px 3px 9px grey;
+    }
+
+    .itemservice {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: solid 1px white;
+        padding: 5px;
+        padding-bottom: 15px;
+    }
+
+    .textservice {
+        text-align: center;
+    }
+
+    .lastservice {
+        margin-bottom: 100px;
+    }
+
+    .titredemande {
+        font-weight: 700;
+        margin-top: 50px;
+        font-size: 24px;
+    }
+
+    .textdemande {
+        margin: 0 auto;
+        text-align: justify;
+        margin-bottom: 75px;
+
+    }
+
+    .plusinfos {
+        color: white;
+        display: flex;
+        width: 150px;
+        height: 40px;
+        text-decoration: none;
+        background-color: rgb(67, 71, 152);
+        border-radius: 10px;
+        margin-right: 20px;
+        justify-content: center;
+        align-items: center;
+        padding: 5px;
+
+    }
+
+    .plusinfos:hover {
+        background-color: rgb(104, 106, 147);
+    }
+
+
+
+
+
+    .postit {
+        margin: 0 auto;
+        top: -50px;
+        position: relative;
+        padding: 20px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 80%;
+        padding: 50px;
+        background-color: rgb(228, 229, 231);
+        box-shadow: 1px 3px 9px grey;
+    }
+
+    .postit ul,
+    .postit p {
+        display: inline-block;
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    .textpostit {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .postit1 {
+        color: rgb(36, 38, 81)
+    }
+
+    .postit2 {
+        color: rgb(67, 71, 152)
+    }
+
+    .postit3 {
+        color: rgb(124, 127, 197)
+    }
+
+    .doubleimg {
+        position: relative;
+        margin: 0 auto;
+
+        width: 80%;
+        margin-bottom: 100px;
+    }
+
+    .img1 {
+        height: 80%;
+    }
+
+    .img2 {
+
+        position: absolute;
+        bottom: -155px;
+        right: 0;
+    }
+
+    .why {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .temoin {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    .scroll {
+        display: flex;
+        flex-direction: column;
+
+        border-radius: 20px;
+        background-color: rgb(36, 38, 81);
+        padding: 50px;
+        height: 500px;
+
+        transition: 2s;
+
+
+    }
+
+    .scroll.active {
+        left: 0;
+    }
+
+    .scroll ul {
+        display: flex;
+    }
+
+    .scroll li {
+        list-style: none;
+        ;
+        color: rgb(248, 212, 81);
+
+    }
+
+    .headscroll {
+        display: flex;
+
+
+    }
+
+    .etoilenom {
+        width: 70%;
+        margin-left: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+
+    }
+
+    .etoilenom ul p {
+        display: inline-block;
+        width: 50px;
+    }
+
+    .etoilenom li {
+
+        display: inline-block;
+
+    }
+
+    .etoilenom ul {
+        width: 150px;
+        justify-content: space-around;
+        margin: 0;
+        padding: 0;
+
+
+    }
+
+    .namescroll {
+        color: white;
+        margin: 0;
+        padding: 0;
+        font-size: 20px;
+    }
+
+    .textscroll {
+        font-size: 20px;
+        color: white;
+        text-align: justify;
+    }
+
+
+    .disent {
+        text-align: center;
+        font-size: 35px;
+        font-weight: 600;
+    }
+
+
+
+
+
+
+    .headertemoin {
+
+        display: flex;
+        align-items: center;
+        height: 100px;
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    .separatorbis {
+        display: inline-block;
+        background-color: rgb(255, 255, 255);
+        height: 0.001em;
+        width: 35%;
+        border-bottom: 1px solid rgb(255, 255, 255);
+    }
+
+    .separator {
+        display: inline-block;
+        background-color: black;
+        height: 0.001em;
+        width: 60%;
+        border-bottom: 1px solid black;
+
+    }
+
+
+    .secondbtn {
+        margin: 40px auto;
+    }
+
+    .bandeau {
+
+        display: none;
+        height: 59px;
+        background-color: rgb(67, 71, 152);
+    }
+
+    .bandeau1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 45%;
+        background-color: #fff;
+    }
+
+    .triangle {
+        background-color: #fff;
+        width: 1px;
+        height: 1px;
+        border: 1px solid #fff;
+        ;
+        border-color: rgb(67, 71, 152) rgb(67, 71, 152) transparent transparent;
+        border-width: 30px;
+    }
+
+    .dispo {
+        font-weight: 500;
+        width: 50%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+    }
+
+    .textbandeau {
+        margin-top: 10px;
+
+        font-family: 'Franklin Gothic', 'Arial Narrow', Arial, sans-serif;
+        font-weight: 300;
+        font-size: 34px;
+    }
+</style>
+
+<body>
+    <script src="https://kit.fontawesome.com/4fb2a9d26a.js" crossorigin="anonymous"></script>
+    <div class="bandeau">
+        <div class="bandeau1">
+            <p class="fa-solid fa-phone numband"> 06 52 61 06 13 / 09 75 20 04 91</p>
+        </div>
+        <div class="triangle"></div>
+        <div class="dispo">
+            <p class="textbandeau"> DISPONIBLE 7J/7 24H/24</p>
+        </div>
+
+    </div>
+    <div class="header">
+        <div class="tete">
+
+            <nav class="navbar col-9 navbar-expand-lg  text-light  mb-5 ">
+                <div class="container-fluid ">
+
+                    <button class="navbar-toggler " style="background-color:  rgb(67, 71, 152)" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse  " id="navbarNavAltMarkup">
+                        <div class="navbar-nav  ">
+                            <a class="nav-link text-si " aria-current="page" href="#">Acceuil</a>
+                            <a class="nav-link" href="#">Services</a>
+                            <a class="nav-link" href="#">Faites vous Geolocaliser</a>
+                            <a class="nav-link" href="#">Photos</a>
+
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <div class="logo"></div>
+        </div>
+        <div class="slogan">
+
+            <h1>LE SPÉCIALISTE DU DÉPANNAGE AUTO ET TRANSPORT DE VÉHICULES EN MÉTROPOLE LILLOISE</h1>
+            <a class="contactez_nous" href="http://">
+                <p class="text_btn font ">Contactez Nous !</p>
+            </a>
+        </div>
+    </div>
+
+    <div class="skills">
+        <div class="titleskill mb">
+            <h2 class="bluetxt bold big">MBDI Assistance, Société de remorquage automobile en métropole Lilloise</h2>
+        </div>
+        <div class="textskill mb bold greytxt">
+            <p>Depuis plus de 5 ans, MBDI Assistance assure le dépannage, le remorquage et le transport de véhicules sur
+                courtes et longues distances. Reconnus par nos clients pour notre sérieux, notre rapidité et notre
+                bienveillance, nous adaptons nos prestations à vos besoin pour prendre soin de votre véhicule (Voiture,
+                moto, utilitaire, fourgon, Camping-car,etc), qu'il soit en panne, hors d'usage, accidenté ou intact.</p>
+        </div>
+        <div class="logoskill">
+            <div class="itemskill mb">
+                <img src="etoile.png" alt="">
+                <h4 class="font bluetxt">+ 5 ANS d'EXPERIENCE</h4>
+                <p class=" bluetxt">
+                    Plus de 5 ans à satisfaire nos clients, nous mettons tout en oeuvre pour adapter nos prestations à
+                    vos besoins</p>
+            </div>
+            <div class="itemskill mb">
+                <img src="check.png" alt="">
+                <h4 class="font bluetxt">AGRÉÉ</h4>
+                <p class=" bluetxt">
+                    En partenariat avec les assurances, nous vous accompagnons du début à la fin pour le transport de
+                    votre véhicule</p>
+            </div>
+            <div class="itemskill">
+                <img src="main.png" alt="">
+                <h4 class="font bluetxt">TRAVAIL SOIGNÉ</h4>
+                <p class=" bluetxt">
+                    Comme en témoignent nos clients, nos équipes de dépanneurs assurent un travail de qualité, soucieux
+                    de votre satisfaction</p>
+            </div>
+        </div>
+    </div>
+    <div class="demande">
+        <div class="demandeprix">
+            <div class="formulaire">
+                <p class="bluetxt bold titredemande font ">DEMANDE DE PRIX</p>
+                <a class="rp-widget-link inputprix" rel="noopener" target="_blank" data-currency="EUR"
+                    data-measure="metric"
+                    data-css="https://www.bonnesroutes.com/widget/v1/widget.css?pc=269adb&bc=ffffff&tc=000000"
+                    data-show-result-customized-cost data-show-result-map data-show-result-scheme
+                    href="https://www.bonnesroutes.com/"></a>
+                <script async="async" src="https://www.bonnesroutes.com/widget/v1/client.js"></script>
+            </div>
+            <div class="textdemande">
+                <h2 class="bluetxt bold big mb">OU PRENEZ CONTACT AVEC NOUS</h2>
+
+                <h3 class="bold  fa-solid fa-phone mb"> 06 52 61 06 13 / 09 75 20 04 91</h3>
+
+                <h3 class=" bold mb">CONTACT@MBDI.FR</h3>
+
+                <h3 class="bluetxt  ">Disponible 7j/7 24h/24</h3>
+
+                <h3 class="bluetxt bold big">DEVIS GRATUIT</h3>
+            </div>
+
+        </div>
+    </div>
+    <div class="allservice">
+        <div class="services">
+            <div class="textservice mb">
+                <div class="headertemoin">
+                    <div class="separatorbis"></div>
+                    <h3 class="temoignage bold">Nos Services </h3>
+                    <div class="separatorbis"></div>
+                </div>
+                <h1 class="tac bluetxt bold big ">REMORQUAGE AUTOMOBILE COURTE ET LONGUE DISTANCE</h1>
+                <h2 class="tac big bold">LILLE - ROUBAIX - TOURCOING - LENS - ARMENTIÈRES</h2>
+            </div>
+
+            <div class="logoservice">
+                <div class="itemservice tac mb">
+                    <div class="logoservice"></div>
+                    <h4>Dépannage de voiture</h4>
+                    <p class="mb">Expérimentés dans le dépannage urgent de véhicule, nos équipes de dépannage automobile
+                        auront les
+                        compétences nécessaires à la réparation des pannes mineures rencontrées par votre véhicule. Le
+                        maximum sera réalisé afin d'éviter un remorquage du véhicule</p>
+                    <a class="plusinfos font" href=""> Plus d'infos =></a>
+
+                </div>
+                <div class="itemservice tac mb">
+                    <div class="logoservice"></div>
+                    <h4>Remorquage de voiture</h4>
+                    <p class="mb">A l'atactezide de nos dépanneuses professionnelles, nous assurerons le remorquage de
+                        votre
+                        voiture
+                        accidentée ou hors d'usage. Formés à toutes les situations nos dépanneurs ont l'expérience
+                        nécessaire pour remorquer votre véhicule de la meilleure manière</p>
+                    <a class="plusinfos font" href="">Plus d'infos =></a>
+
+                </div>
+                <div class="itemservice tac mb lastservice">
+                    <div class="logoservice"></div>
+                    <h4>Transport de voiture</h4>
+                    <p class="mb">Vous souhaitez transporter votre véhicule d'un point A à un point B ? En métropole
+                        Lilloise, à
+                        travers la France ou à travers l'Europe, nos équipes sont formées pour transporter avec le plus
+                        grand soin tout types de véhicules</p>
+                    <a class="plusinfos font" href="">Plus d'infos =></a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="postit">
+        <img src="cars.png" alt="">
+        <div class="textpostit">
+            <p>Quels véhicules pouvons-nous dépanner ?</p>
+            <ul>
+                <li class="postit1">MOTOS, TRICYCLE, QUAD</li>
+                <li class="postit2">VOITURES, CITADINES, BERLINES, ROUTIERES, SUV LIMOUSINES</li>
+                <li class="postit3">UTILITAIRES, FOURGONETTES, CAMIONETTES, GRAND FOURGON, CAMPING-CAR</li>
+            </ul>
+        </div>
+    </div>
+    <div class="whyimg">
+        <div class="doubleimg">
+            <img class="img1" src="rect-1.png" width="100%" alt="">
+            <img class="img2" src="rect-2.png" width="80%" alt="">
+        </div>
+        <div class="why">
+            <h3 class="mb lit">Pourquoi choisir <span class="litbold">MBDI Assistance ?</span> </h3>
+            <h1>PLUS DE 5 ANS D'EXPÉRIENCE DANS LA MÉTROPOLE LILLOISE</h1>
+            <a class="contactez_nous secondbtn" href="http://">
+                <p class="text_btn font">Contactez Nous !</p>
+            </a>
+        </div>
+    </div>
+    <div class="temoin">
+        <div class="headertemoin">
+            <h3 class="temoignage bold">Les Témoignages </h3>
+            <div class="separator "></div>
+        </div>
+        <p class="disent mb">CE QUE NOS CLIENTS DISENT DE NOUS</p>
+
+
+        <div class="container">
+            <div class="row">
+                <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="scroll">
+
+                                <div class="headscroll">
+                                    <img src="evin.png" width="60px" height="60px" alt="">
+                                    <div class="etoilenom">
+                                        <p class="namescroll">Oceane et Brice Evin
+                                        </p>
+                                        <ul>
+                                            <li><i class=" etoile fa-solid fa-star"></i></li>
+                                            <li><i class=" etoile fa-solid fa-star"></i></li>
+                                            <li><i class=" etoile fa-solid fa-star"></i></li>
+                                            <li><i class=" etoile fa-solid fa-star"></i></li>
+                                            <li><i class=" etoile fa-solid fa-star"></i></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+
+                                <div class="textscroll">
+                                    <p>Nous avons eu le support téléphonique de Esteban Garcia qui a été excellent avec
+                                        une réelle
+                                        attention client. C’était important car nous étions désespérés après avoir
+                                        appelé 4 garages
+                                        autour de Dax qui ne pouvaient rien faire dans les 2 semaines sans s’inquiéter
+                                        de l’urgence
+                                        de
+                                        la situation. Au moins ils ont écouté et fait de leur mieux pour aider et
+                                        rappeler. Merci
+                                    </p>
+                                </div>
+
+
+
+
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="scroll">
+
+                                <div class="headscroll">
+                                    <img src="marion-tonelle.png" width="60px" height="60px" alt="">
+                                    <div class="etoilenom">
+                                        <p class="namescroll">Marion Tonnelle</p>
+                                        <ul>
+                                            <li><i class=" etoile fa-solid fa-star"></i></li>
+                                            <li><i class=" etoile fa-solid fa-star"></i></li>
+                                            <li><i class=" etoile fa-solid fa-star"></i></li>
+                                            <li><i class=" etoile fa-solid fa-star"></i></li>
+                                            <li><i class=" etoile fa-solid fa-star"></i></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+
+                                <div class="textscroll">
+                                    <p>Société compétente ponctuelle et remorqueur agréable communication au top besoin
+                                        d’un
+                                        rapatriement en urgence afin que l’on véhicule ne reste pas plus longtemps dans
+                                        un garage
+                                        incompétent de Lens , il n’a pas hésiter une seconde à accepter le remorquage et
+                                        a fait le
+                                        maximum pour qu’il soit réaliser au plus vite je recommande sans hésitation MdBi
+                                        pour tout
+                                        transport je garde les coordonnées et n’hésiterais pas à passer le mot à mon
+                                        entourage en
+                                        cas de nécessité. Bonne continuation Mme Tonnelle
+
+
+                                    </p>
+                                </div>
+
+
+
+
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="scroll">
+
+                                <div class="headscroll">
+                                    <img src="hcars.png" width="60px" height="60px" alt="">
+                                    <div class="etoilenom">
+                                        <p class="namescroll">H-Car
+                                        </p>
+                                        <ul>
+                                            <li><i class=" etoile fa-solid fa-star"></i></li>
+                                            <li><i class=" etoile fa-solid fa-star"></i></li>
+                                            <li><i class=" etoile fa-solid fa-star"></i></li>
+                                            <li><i class=" etoile fa-solid fa-star"></i></li>
+                                            <li><i class=" etoile fa-solid fa-star"></i></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+
+                                <div class="textscroll">
+                                    <p>Nous avons eu le support téléphonique de Esteban Garcia qui a été excellent avec
+                                        une réelle
+                                        attention client. C’était important car nous étions désespérés après avoir
+                                        appelé 4 garages
+                                        autour de Dax qui ne pouvaient rien faire dans les 2 semaines sans s’inquiéter
+                                        de l’urgence
+                                        de
+                                        la situation. Au moins ils ont écouté et fait de leur mieux pour aider et
+                                        rappeler. Merci
+                                    </p>
+                                </div>
+
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer"></div>
+
+
+        <script>
+            //     var scroll = document.querySelectorAll(".scroll")
+            //     var i = -1
+            //     setInterval(function(){
+            //         var current = (i+1)%scroll.length
+            // scroll[current].classList.add('active')
+
+            //     },1000)
+            //     j=0
+            //     setInterval(function(){
+            //         var current = (j+1)%scroll.length
+            // scroll[current].classList.remove('active')
+
+            //     },2000)
+            var slideIndex = 0;
+            showSlides();
+
+            function showSlides() {
+
+                var i;
+                var scroll = document.querySelectorAll(".scroll")
+                for (i = 0; i < scroll.length; i++) {
+                    scroll[i].classList.remove('active')
+                }
+                slideIndex++;
+                if (slideIndex > scroll.length) { slideIndex = 1 }
+                scroll[slideIndex - 1].classList.add('active')
+                setTimeout(showSlides, 10000); // Change l'image toutes les 3 secondes
+            }
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+            crossorigin="anonymous"></script>
+
+</body>
+
+</html>
